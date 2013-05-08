@@ -1,0 +1,156 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis/dissertation template
+%   Department of Logistics
+%   Stellenbosch University
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[msc]{thesis}
+% Thesis options are
+%                       msc
+%                       mcomm
+%                       phdsc
+%                       phdcomm
+
+
+
+% add packages as needed (check first, the thesis class already includes some packages)
+
+\usepackage{amsmath, amsthm, amsfonts}
+
+\DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
+\DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
+\DeclareMathSymbol{\vardiamond}{\mathalpha}{extraup}{87}
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% thesis details
+%
+%%%%%%%%%%%%%%%%%%
+
+\thesistitle{The design of a distributed framework\\ for the enumeration of sets of\\ mutually orthogonal Latin squares}
+\student{Johannes Gerhardus Benad\'{e}}
+\graduation{December}
+\year{2014}
+
+% if masters
+\supervisor{Prof JH van Vuuren}
+\cosupervisor{Dr AP Burger} % remove if NA
+
+% if phd
+%\promoter{Promoter name}
+%\copromoter{Co-promoter name} % remove if NA
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\addbibresource{mybib.bib} % your .bib file
+
+\newcommand{\lat}{Latin square}
+\renewcommand{\l}{ \mbox{\bf \emph{L}} }
+\newcommand{\lref}[1]{$\l_{\ref{#1}}$}
+
+\newcounter{ls}
+\setcounter{ls}{0}
+\renewcommand\thels{\arabic{chapter}.\arabic{ls}}
+
+\newenvironment{ls}[1]
+{ {%\stepcounter{ls} 
+\refstepcounter{ls} \label{#1}}
+\[ \mbox{\bf \emph{L}}_{\thels} = \left[ \;\; \begin{matrix}
+}
+{
+\end{matrix} \;\; \right] \] 
+}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{exmpl}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+
+%\newenvironment{proof}[1][Proof]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1:}]}{\end{trivlist}}
+%\newenvironment{definition}[1][Definition]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1 }]}{\end{trivlist}}
+%\newenvironment{example}[1][Example]{\begin{trivlist}
+%\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% front page and decleration page - you can't edit this
+% set up according to university standards (as specified in yearbook)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% go populate the fields in this file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{preamble} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% how-to examples:
+%
+%%%%%%%%%%%%%%%%%%
+
+\input{Ch1}
+\input{Ch2_Background}
+\input{Ch3_Enumeration}
+\input{Ch4_Distribution}
+\input{Ch5_Results}
+\input{Ch6_Conclusions}
+%Appendices
+\input{App_Groups}
+%\input{chapter}
+
+%\input{tables}
+
+%\input{figures}
+
+%\input{algorithms}
+
+%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%
+% bibliography
+%
+%%%%%%%%%%%%%%%%%%
+
+\cite{*} % cites all items in your .bib file for the purpose of testing biblatex - REMOVE!
+
+\printbibliography[heading=bibintoc] % prints a bibliography containing all (and only) cited items
+
+%%%%%%%%%%%%%%%%%%
+
+\end{document}

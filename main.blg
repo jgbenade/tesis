@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: biblatex.bst
+Case mismatch error between cite keys denes1 and Denes1
+---line 64 of file main.aux
+ : \citation{denes1
+ :                 }
+I'm skipping whatever remains of this command
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: main-blx.bib
+Database file #2: mybib.bib
+Warning--I didn't find a database entry for "wallis"
+Biblatex version: 1.7
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+You've used 32 entries,
+            6019 wiz_defined-function locations,
+            1325 strings with 14254 characters,
+and the built_in function-call counts, 99312 in all, are:
+= -- 4118
+> -- 3377
+< -- 1126
++ -- 1071
+- -- 1142
+* -- 6319
+:= -- 5734
+add.period$ -- 0
+call.type$ -- 32
+change.case$ -- 635
+chr.to.int$ -- 60
+cite$ -- 62
+duplicate$ -- 11221
+empty$ -- 10553
+format.name$ -- 2080
+if$ -- 22858
+int.to.chr$ -- 0
+int.to.str$ -- 89
+missing$ -- 0
+newline$ -- 737
+num.names$ -- 1660
+pop$ -- 9958
+preamble$ -- 1
+purify$ -- 676
+quote$ -- 0
+skip$ -- 6271
+stack$ -- 0
+substring$ -- 2495
+swap$ -- 3604
+text.length$ -- 849
+text.prefix$ -- 34
+top$ -- 1
+type$ -- 1203
+warning$ -- 0
+while$ -- 642
+width$ -- 0
+write$ -- 704
+(There was 1 error message)

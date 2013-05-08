@@ -1,0 +1,759 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Anderson2006}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Anderson}{A.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Christensen}{C.}%
+     {Carl}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Allen}{A.}%
+     {Bruce}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Ieee}%
+  }
+  \strng{namehash}{ADCCAB1}
+  \strng{fullhash}{ADCCAB1}
+  \field{sortinit}{A}
+  \verb{doi}
+  \verb 10.1109/SC.2006.24
+  \endverb
+  \field{isbn}{0-7695-2700-0}
+  \field{pages}{33\bibrangedash 33}
+  \field{title}{{Designing a Runtime System for Volunteer Computing}}
+  \verb{url}
+  \verb http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4090207
+  \endverb
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Anderson, Christensen, Allen - Designing
+  \verb  a Runtime System for Volunteer Computing.pdf:pdf
+  \endverb
+  \field{journaltitle}{ACM/IEEE SC 2006 Conference (SC'06)}
+  \field{month}{11}
+  \field{year}{2006}
+\endentry
+
+\entry{anderson2004boinc}{inproceedings}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Anderson}{A.}%
+     {David~P}{D.~P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{ADP1}
+  \strng{fullhash}{ADP1}
+  \field{sortinit}{A}
+  \field{booktitle}{Grid Computing, 2004. Proceedings. Fifth IEEE/ACM
+  International Workshop on}
+  \field{pages}{4\bibrangedash 10}
+  \field{title}{Boinc: A system for public-resource computing and storage}
+  \field{year}{2004}
+\endentry
+
+\entry{anderson2009celebrating}{inproceedings}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Anderson}{A.}%
+     {David~P}{D.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Reed}{R.}%
+     {Kevin}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{ADPRK1}
+  \strng{fullhash}{ADPRK1}
+  \field{sortinit}{A}
+  \field{booktitle}{System Sciences, 2009. HICSS'09. 42nd Hawaii International
+  Conference on}
+  \field{pages}{1\bibrangedash 8}
+  \field{title}{Celebrating diversity in volunteer computing}
+  \field{year}{2009}
+\endentry
+
+\entry{bose}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Bose}{B.}%
+     {Raj~Chandra}{R.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shrikhande}{S.}%
+     {Sharadchandra~S}{S.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Parker}{P.}%
+     {Ernest~T}{E.~T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BRCSSSPET1}
+  \strng{fullhash}{BRCSSSPET1}
+  \field{sortinit}{B}
+  \field{pages}{189\bibrangedash 203}
+  \field{title}{Further results on the construction of mutually orthogonal
+  Latin squares and the falsity of Euler’s conjecture}
+  \field{volume}{12}
+  \field{journaltitle}{Canad. J. Math}
+  \field{year}{1960}
+\endentry
+
+\entry{bose1}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Bose}{B.}%
+     {Raj~Chandra}{R.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Shrikhande}{S.}%
+     {Sharadchandra~Shankar}{S.~S.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {National Academy of Sciences}%
+  }
+  \strng{namehash}{BRCSSS1}
+  \strng{fullhash}{BRCSSS1}
+  \field{sortinit}{B}
+  \field{number}{5}
+  \field{pages}{734}
+  \field{title}{On the falsity of Euler's conjecture about the non-existence of
+  two orthogonal Latin squares of order $4t+ 2$}
+  \field{volume}{45}
+  \field{journaltitle}{Proceedings of the National Academy of Sciences of the
+  United States of America}
+  \field{year}{1959}
+\endentry
+
+\entry{Bulutoglu}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Bulutoglu}{B.}%
+     {D~A}{D.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Margot}{M.}%
+     {F}{F}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{a,afit,bulutoglu,corresponding author,covering arrays,d,d-optimal
+  designs,dursun,edu,email addresses,fractional factorial designs,isomorphism
+  classes,isomorphism pruning,orthogonal arrays,packing arrays}
+  \strng{namehash}{BDAMF1}
+  \strng{fullhash}{BDAMF1}
+  \field{sortinit}{B}
+  \field{number}{December 2006}
+  \field{title}{{Classification of Orthogonal Arrays by Integer Programming}}
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Bulutoglu, Margot - Classification of Or
+  \verb thogonal Arrays by Integer Programming.pdf:pdf
+  \endverb
+\endentry
+
+\entry{colb}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Colbourn}{C.}%
+     {Charles~J}{C.~J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dinitz}{D.}%
+     {Jeffrey~H}{J.~H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Chapman \& Hall/CRC}%
+  }
+  \strng{namehash}{CCJDJH1}
+  \strng{fullhash}{CCJDJH1}
+  \field{sortinit}{C}
+  \field{title}{Handbook of combinatorial designs}
+  \field{volume}{42}
+  \field{year}{2006}
+\endentry
+
+\entry{denes2}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {D{\'e}nes}{D.}%
+     {J{\'o}zsef}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Keedwell}{K.}%
+     {AD}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {North Holland}%
+  }
+  \strng{namehash}{DJKA1}
+  \strng{fullhash}{DJKA1}
+  \field{sortinit}{D}
+  \field{title}{Latin squares: New developments in the theory and applications}
+  \field{volume}{46}
+  \field{year}{1991}
+\endentry
+
+\entry{Denes1}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {D{\'e}nes}{D.}%
+     {J{\'o}zsef}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Keedwell}{K.}%
+     {Anthony~D}{A.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {English Universities Press London}%
+  }
+  \strng{namehash}{DJKAD1}
+  \strng{fullhash}{DJKAD1}
+  \field{sortinit}{D}
+  \field{title}{Latin squares and their applications}
+  \field{year}{1974}
+\endentry
+
+\entry{euler}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Euler}{E.}%
+     {L}{L}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EL1}
+  \strng{fullhash}{EL1}
+  \field{sortinit}{E}
+  \field{pages}{85\bibrangedash 239}
+  \field{title}{Recherches sur une nouvelle esp\'ece de quarr\'es magiques}
+  \field{volume}{9}
+  \field{journaltitle}{Verhandelingen uitgegeven door het zeeuwsch Genootschap
+  der Wetenschappen te Vlissingen}
+  \field{year}{1782}
+\endentry
+
+\entry{Euler1}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Euler}{E.}%
+     {Leonhard}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{EL2}
+  \strng{fullhash}{EL2}
+  \field{sortinit}{E}
+  \field{pages}{593\bibrangedash 602}
+  \field{title}{De quadratis magicis [On magic squares]}
+  \field{volume}{2}
+  \field{journaltitle}{Commentationes arithmeticae}
+  \field{year}{1849}
+\endentry
+
+\entry{fisher1}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Fisher}{F.}%
+     {Ronald~A}{R.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oliver \& Boyd, Edinburgh}%
+  }
+  \strng{namehash}{FRA1}
+  \strng{fullhash}{FRA1}
+  \field{sortinit}{F}
+  \field{title}{Statistical methods for research workers}
+  \field{year}{1925}
+\endentry
+
+\entry{fisher2}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Fisher}{F.}%
+     {Ronald~Aylmer}{R.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Oliver \& Boyd, Edinburgh}%
+  }
+  \strng{namehash}{FRA2}
+  \strng{fullhash}{FRA2}
+  \field{sortinit}{F}
+  \field{title}{The design of experiments.}
+  \field{journaltitle}{The design of experiments.}
+  \field{year}{1935}
+\endentry
+
+\entry{Hall1945}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hall}{H.}%
+     {Marshall}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{sortinit}{H}
+  \field{number}{1935}
+  \field{pages}{387\bibrangedash 388}
+  \field{title}{{An existence theorem for Latin squares}}
+  \verb{url}
+  \verb http://www.ams.org/bull/1945-51-06/S0002-9904-1945-08361-X/S0002-9904-1
+  \verb 945-08361-X.pdf
+  \endverb
+  \field{volume}{10}
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Hall - An existence theorem for Latin sq
+  \verb uares.pdf:pdf
+  \endverb
+  \field{journaltitle}{Bull. Amer. Math. Soc}
+  \field{year}{1945}
+\endentry
+
+\entry{Designs2002}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kaski}{K.}%
+     {P}{P}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{Block designs}
+  \strng{namehash}{KP1}
+  \strng{fullhash}{KP1}
+  \field{sortinit}{K}
+  \field{isbn}{9512258153}
+  \field{title}{{Isomorph-free exhaustive generation of combinatorial designs}}
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Kaski - Isomorph-free exhaustive generat
+  \verb ion of combinatorial designs.pdf:pdf
+  \endverb
+  \field{year}{2002}
+\endentry
+
+\entry{Kaski02isomorph-freeexhaustive}{report}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kaski}{K.}%
+     {Petteri}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KP2}
+  \strng{fullhash}{KP2}
+  \field{sortinit}{K}
+  \field{title}{Isomorph-free exhaustive generation of combinatorial designs}
+  \field{type}{techreport}
+  \field{year}{2002}
+\endentry
+
+\entry{keedwell2000designing}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Keedwell}{K.}%
+     {AD}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KA1}
+  \strng{fullhash}{KA1}
+  \field{sortinit}{K}
+  \field{pages}{65\bibrangedash 86}
+  \field{title}{Designing Tournaments with the aid of Latin Squares: a
+  presentation of old and new results}
+  \field{volume}{58}
+  \field{journaltitle}{Utilitas Mathematica}
+  \field{year}{2000}
+\endentry
+
+\entry{kidd2010tabu}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kidd}{K.}%
+     {MP}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Open Journals System}%
+  }
+  \strng{namehash}{KM1}
+  \strng{fullhash}{KM1}
+  \field{sortinit}{K}
+  \field{title}{A tabu-search for minimising the carry-over effects value of a
+  round-robin tournament}
+  \field{year}{2010}
+\endentry
+
+\entry{Kidd2012}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kidd}{K.}%
+     {MP}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KM1}
+  \strng{fullhash}{KM1}
+  \field{sortinit}{K}
+  \field{number}{March}
+  \field{title}{{On the existence and enumeration of sets of two or three
+  mutually orthogonal Latin squares with application to sports tournament
+  scheduling}}
+  \verb{url}
+  \verb http://ir1.sun.ac.za/handle/10019.1/20038
+  \endverb
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Kidd - On the existence and enumeration
+  \verb of sets of two or three mutually orthogonal Latin squares with applicat
+  \verb ion to sports tournament scheduling.pdf:pdf
+  \endverb
+  \field{year}{2012}
+\endentry
+
+\entry{laywine}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Laywine}{L.}%
+     {Charles~F}{C.~F.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mullen}{M.}%
+     {Gary~L}{G.~L.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley New York}%
+  }
+  \strng{namehash}{LCFMGL1}
+  \strng{fullhash}{LCFMGL1}
+  \field{sortinit}{L}
+  \field{title}{Discrete mathematics using Latin squares}
+  \field{volume}{17}
+  \field{year}{1998}
+\endentry
+
+\entry{Lee2006}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Lee}{L.}%
+     {Moon~Ho}{M.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pokhrel}{P.}%
+     {Subash~Shree}{S.~S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Korea}{K.}%
+     {South}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \keyw{1,27,but question is of,constructing a random latin,enumeration for
+  example,exist for a given,frequency squares,how,introduction from latin
+  square,latin squares,many latin squares can,no good algorithm for,one natural
+  approach to,orthogonality,refer to wilson,s the order
+  of,square,t-orthogonality,the latin square,their construction,there seems to
+  be,we can know that}
+  \strng{namehash}{LMHPSSKS1}
+  \strng{fullhash}{LMHPSSKS1}
+  \field{sortinit}{L}
+  \field{pages}{1\bibrangedash 31}
+  \field{title}{{On Orthogonality of Latin Squares}}
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/Lee, Pokhrel, Korea - On Orthogonality o
+  \verb f Latin Squares.pdf:pdf
+  \endverb
+  \field{year}{2006}
+\endentry
+
+\entry{mann1942construction}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Mann}{M.}%
+     {Henry~B}{H.~B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {JSTOR}%
+  }
+  \strng{namehash}{MHB1}
+  \strng{fullhash}{MHB1}
+  \field{sortinit}{M}
+  \field{pages}{418\bibrangedash 423}
+  \field{title}{The construction of orthogonal latin squares}
+  \field{journaltitle}{The Annals of Mathematical Statistics}
+  \field{year}{1942}
+\endentry
+
+\entry{McKay2007}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {McKay}{M.}%
+     {BD}{B.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Meynert}{M.}%
+     {Alison}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Myrvold}{M.}%
+     {Wendy}{W.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MBMAMW1}
+  \strng{fullhash}{MBMAMW1}
+  \field{sortinit}{M}
+  \field{pages}{1\bibrangedash 28}
+  \field{title}{{Small Latin squares, quasigroups, and loops}}
+  \verb{url}
+  \verb http://onlinelibrary.wiley.com/doi/10.1002/jcd.20105/abstract
+  \endverb
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/McKay, Meynert, Myrvold - Small Latin sq
+  \verb uares, quasigroups, and loops.pdf:pdf
+  \endverb
+  \field{journaltitle}{Journal of Combinatorial \ldots}
+  \field{year}{2007}
+\endentry
+
+\entry{gimps}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Mersenne~Research}{M.~R.}%
+     {Inc}{I.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MRI1}
+  \strng{fullhash}{MRI1}
+  \field{sortinit}{M}
+  \field{title}{Great Internet Mersenne Prime Search}
+  \verb{url}
+  \verb http://www.mersenne.org/
+  \endverb
+  \field{month}{03}
+  \field{year}{2013}
+\endentry
+
+\entry{Norton1}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Norton}{N.}%
+     {Donald~A}{D.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Pacific Journal of Mathematics}%
+  }
+  \strng{namehash}{NDA1}
+  \strng{fullhash}{NDA1}
+  \field{sortinit}{N}
+  \field{number}{3}
+  \field{pages}{335\bibrangedash 341}
+  \field{title}{Groups of orthogonal row-latin squares.}
+  \field{volume}{2}
+  \field{journaltitle}{Pacific Journal of Mathematics}
+  \field{year}{1952}
+\endentry
+
+\entry{boinc}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {California}{C.}%
+     {University}{U.}%
+     {of}{o.}%
+     {}{}}%
+  }
+  \strng{namehash}{oCU1}
+  \strng{fullhash}{oCU1}
+  \field{sortinit}{O}
+  \field{title}{BOINC: Open-source software for volunteer computing and grid
+  computing.}
+  \verb{url}
+  \verb http://boinc.berkeley.edu/
+  \endverb
+  \field{month}{03}
+  \field{year}{2013}
+\endentry
+
+\entry{boinc2}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {California}{C.}%
+     {University}{U.}%
+     {of}{o.}%
+     {}{}}%
+  }
+  \strng{namehash}{oCU1}
+  \strng{fullhash}{oCU1}
+  \field{sortinit}{O}
+  \field{title}{Why use BOINC?}
+  \verb{url}
+  \verb http://boinc.berkeley.edu/trac/wiki/WhyUseBoinc
+  \endverb
+  \field{month}{03}
+  \field{year}{2013}
+\endentry
+
+\entry{parker1959construction}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Parker}{P.}%
+     {ET}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {JSTOR}%
+  }
+  \strng{namehash}{PE1}
+  \strng{fullhash}{PE1}
+  \field{sortinit}{P}
+  \field{number}{6}
+  \field{pages}{946\bibrangedash 949}
+  \field{title}{Construction of some sets of mutually orthogonal Latin squares}
+  \field{volume}{10}
+  \field{journaltitle}{Proceedings of the American Mathematical Society}
+  \field{year}{1959}
+\endentry
+
+\entry{robinson}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Robinson}{R.}%
+     {D\_F\_}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RD1}
+  \strng{fullhash}{RD1}
+  \field{sortinit}{R}
+  \field{pages}{73\bibrangedash 82}
+  \field{title}{Constructing an annual round-robin tournament played on neutral
+  grounds}
+  \field{volume}{10}
+  \field{journaltitle}{Math. Chronicle}
+  \field{year}{1981}
+\endentry
+
+\entry{tarry}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Tarry}{T.}%
+     {Gaston}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {au Secr{\'e}tariat de l'Association fran{\c{c}}aise pour l'avancement des
+  sciences}%
+  }
+  \strng{namehash}{TG1}
+  \strng{fullhash}{TG1}
+  \field{sortinit}{T}
+  \field{title}{Le probl{\`e}me des 36 officiers}
+  \field{year}{1900}
+\endentry
+
+\entry{TheMendeleySupportTeam2011}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {{The Mendeley Support Team}}{T.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Mendeley Ltd.}%
+  }
+  \keyw{Mendeley,how-to,user manual}
+  \strng{namehash}{T1}
+  \strng{fullhash}{T1}
+  \field{sortinit}{T}
+  \field{abstract}{%
+  A quick introduction to Mendeley. Learn how Mendeley creates your personal
+  digital library, how to organize and annotate documents, how to collaborate
+  and share with colleagues, and how to generate citations and bibliographies.%
+  }
+  \field{booktitle}{Mendeley Desktop}
+  \field{pages}{1\bibrangedash 16}
+  \field{title}{{Getting Started with Mendeley}}
+  \verb{url}
+  \verb http://www.mendeley.com
+  \endverb
+  \list{location}{1}{%
+    {London}%
+  }
+  \verb{file}
+  \verb :home/gerdus/Meesters/Mendeley/The Mendeley Support Team - Getting Star
+  \verb ted with Mendeley.pdf:pdf
+  \endverb
+  \field{year}{2011}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% some tips on creating nice tables
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Tables}
+
+% TABLE SHADING
+%===============
+%
+% uncomment to change the default shades (gray!45 and gray!25) for the tables in your thesis:
+%    \colorlet{tableheadcolor}{gray!45}  % headers
+%    \colorlet{tablerowcolor}{gray!25}   % normal rows
+%
+% \headcol                 - for shading the header of your table
+% \rowcol                  - shades an entire row
+% \rowcolor{color}         - for custum coloring of a row
+%
+% \cellcolrow              - shades a single entry in the table the shade of a row
+% \cellcolhead             - shades a single entry in the table the shade of the header
+% \cellcolor{color}        - for custom colouring of a single entry in the table
+%
+% \rowcolors{startrow}{oddrowcolor}{evenrowcolor} - for automatic shading of rows, put in table environment
+%   examples:
+%     \rowcolors{3}{gray!25}{} - shades 3rd row and every second row after that
+%     \rowcolors{2}{}{gray!25} - shades 2rd row and every second row after that
+
+
+
+
+% TABLE LINES
+%=============
+%
+% \toprule     - the top-most line of a table, does not work with shading
+% \hline       - normal line, does not work with shading
+% \midline     - normal line, does not work with shading
+% \bottomrule  - a line for the bottom of the table, does not work with shading
+%
+% \topline     - the top-most line of a table if the header is shaded
+%
+% \midline     - the line between the headings and the table body
+% \midlinecbw  - a line for when the previous row is rowcolor and the next line is white
+% \midlinecw   - a line with no black, to further separate a rowcolor row and a white row
+% \midlinewbc  - a line for when the upper row is white and the next line is rowcolor
+% \midlinewc   - a line with no black, to further separate a white row and a rowcolor row
+%
+% \bottomline  - a line for the bottom of the table, when the last row is white
+% \bottomlinec - a line for the bottom of the table, when the last row is rowcolor
+
+
+
+
+% EXAMPLE
+%========
+
+\begin{table}[h!tb]
+
+\centering
+
+\rowcolors{3}{gray!25}{}
+
+\begin{tabular}{ccc}\topline
+\headcol       & & \\ \midline
+\hspace{5cm} \ & & \\
+               & & \\ 
+               & & \\ 
+               & & \\ 
+               & & \\ 
+               & & \\ \bottomlinec
+\end{tabular}
+
+\caption[Example 1 as in list of tables]{Example 1}
+\label{ex1}
+
+\end{table}
+
+
+
+
+% EXAMPLE
+%=========
+%
+% example using multicolumn, multirow and the sideways environment
+
+\begin{table}[h!tb]
+
+\centering
+
+\begin{tabular}{cc|rrrrrr}\hline
+
+&&\multicolumn{6}{c}{this goes across 6 columns}\\
+
+ && col a & col b & col c & col d & col e & col f \\ \hline \hline
+
+\multirow{6}{*}{
+%
+\begin{sideways}
+this is sideways,
+\end{sideways}
+%
+\begin{sideways}
+and goes across
+\end{sideways}
+%
+\begin{sideways}
+six rows
+\end{sideways}
+%
+}
+
+& row 1 \\
+& row 2 \\
+& row 3 \\
+& row 4 \\
+& row 5 \\
+& row 6 \\ \hline
+
+\end{tabular}
+
+\caption[Example 2 as in list of tables]{Example 2}
+\label{ex2}
+
+\end{table}
+
+

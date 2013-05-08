@@ -1,0 +1,132 @@
+\chapter{Background}
+% put these two lines after every \chapter{} command
+\vspace{-2em}
+\minitoc
+\setcounter{ls}{0}
+
+Chapter 2 introduces the basic theory of \lat s. Its will start out with basic definitions of a \lat, show the relationship between \lat s and quasigroups and define properties such as symmetric, idempotent and unipotent. The notions of a universal and transversal will also be introduced.
+It will continue by exploring relationships between \lat s, specifically the notion of orthogonality and $k$-MOLS and introducing alternative representations of $k$-MOLS, for example orthogonal arrays.
+It will also examine the different ways in which permutations may be applied to the symbol set and row or column indexing sets of a \lat \ or a MOLS and give examples of conjugate operations.
+The chapter will conclude by reviewing some ways of recursively constructing \lat s from smaller \lat s by means of, amongst other techniques, elongation and taking direct products.
+
+
+\section{Basic definitions} 
+A \emph{\lat} of order $n$ is commonly defined (see, amongst others, Colbourn and Dinitz \cite[Definition 1.1]{colb} ) to be an $n\times n$ array in which every cell contains a single symbol from an $n$-set $S$, such that each symbol occurs exactly once in each row and column.
+
+If, for example,  $S$ contained the four suits of playing cards, in other words $S  = \{ \vardiamond, \varheart, \clubsuit, \spadesuit\}$, then the $4 \times 4$ array
+\[ \left[ \;\begin{matrix}
+\vardiamond & \varheart & \clubsuit & \spadesuit \\
+\spadesuit & \vardiamond & \varheart & \clubsuit  \\
+\clubsuit & \spadesuit & \vardiamond & \varheart   \\
+\varheart & \clubsuit & \spadesuit & \vardiamond  
+\end{matrix} \;\right]
+\] would be an example of a \lat \ of order $4$. 
+ 
+Let $S(\l)$ denote the symbol set of a \lat \ $\l$ and let  $R(\l)$ and $ C(\l)$ denote its row and column indexing sets, respectively.   For any $i \in R(\l)$ and $j \in C(\l)$ define $\l(i,j) \in S(\l)$ as the element in the $i$-th row and the $j$-th column of $\l$. In the remainder of this thesis it is assumed that  $R(\l)= C(\l)=S(\l) = \mathbb{Z}_n$, without any subsequent loss of generality. 
+
+The \emph{transpose} of $\l$, denoted $\l^T$, is the \lat \ for which $\l^T(j,i) = \l(i,j)$ for all $i\in R(\l)$ and $j\in C(\l)$. The \emph{$k$-th  diagonal} of $\l$ is   the set of entries $\{((k+i) \mod{n} , i) \mid i \in \mathbb{Z}_n \}$ and the $0$-th diagonal is simply referred to as the \emph{main diagonal}. Any row or column in which all of the entries appear in numerical order, \emph{i.e.} $0, 1, \ldots, n-1$, is said to be in  \emph{natural order}.
+
+Let $\l(i)$ and $\l^T(j)$ denote the $i$-th row and the $j$-th column of the \lat \ $\l$, respectively (note that the $j$-th column of $\l$ is, by definition, also the  $j$-th row of $\l^T$). A \lat \ may also be  defined as an $n\times n$ array with the additional property that every row and column is a permutation of the elements of $S(\l)$.  Any individual row or column is therefore a permutation. For instance row $i$ may be expressed as the permutation
+\[ \l(i) = \left( 
+\begin{matrix}
+0 & 1 & \ldots& n-1\\
+\l(i,0) &\l(i,1) &\ldots &\l(i,n-1)
+\end{matrix} \right). \] 
+%The set of row permutations $\{L(i) \mid i\in \mathbb{Z}_n\}$ have the  additional property that for any two rows $i_1, i_2 \in R(\l)$, $\l(i_1, k) \not = \l(i_2, k)$ for all $k \in \mathbb{Z}_n$
+It is clear that every element $k \in \mathbb{Z}_n$ is mapped to a distinct element $\l(i,k) \in S(\l)$ by every permutation in the set of row permutations $\{\l(i) \mid i\in \mathbb{Z}_n\}$ in order to prevent the repetition of symbols in column $k$. A similar condition may be imposed on the set of column permutations, $\{\l^T(j) \mid j\in \mathbb{Z}_n\}$.
+% have the additional property that for any two rows $i_1, i_2 \in R(\l)$, $\l(i_1, k) \not = \l(i_2, k)$ for all $k \in \mathbb{Z}_n$
+
+Although \lat s were studied by Leonard Euler in 1782, British mathematician Arthur Cayley was first to notice, nearly a century later, that the multiplication table (or \emph{Cayley table}, see Appendix \ref{App_group}) of a group is an appropriately bordered \lat. When the abstract concept of a group was generalised to \emph{quasigroups} and \emph{loops} during the 1930s, \lat s again emerged as the corresponding Cayley tables, as is evident from the following result which may  be found in D\'{e}nes and Keedwell {\cite[Theorem 1.1.1]{Denes1}}.
+
+%\lat s may, to a large extent, be thought of as group theoretical objects\footnote{For basic concepts from group theory, see Appendix A}, as is evident from the following statement due to  British mathematician Arthur Cayley, which may also be found in D\'{e}nes and Keedwell {\cite[Theorem 1.1.1]{Denes1}}.
+\begin{theorem}[\cite{Denes1}]
+The Cayley table of a quasigroup is a \lat.
+\end{theorem}
+Given a \lat \ $\l$, the \emph{underlying quasigroup} of $\l$ may be defined as the group $(G,\circ)$ where $a\circ b = c$ if $\l(a,b) = c$. In the case where the first row and column of $\l$ both appear in natural order, $\l$ is said to be a \emph{reduced \lat} or  \emph{in standardised form}. The element $0$ in the underlying quasigroup  of a reduced \lat \ $\l$ is therefore the identity element of the quasigroup $(G,\circ)$ so that $(G,\circ)$ may be referred to as the \emph{underlying loop} of $\l$.  The Cayley table of the group $(\mathbb{Z}_n, +)$ provides such a reduced form \lat \  for all orders $n \in \mathbb{Z}$. For example, the reduced form \lat \
+\begin{ls}{Zn}
+0 & 1 & 2 & 3 & 4 & 5 \\
+1 & 2 & 3 & 4 & 5 & 0 \\
+2 & 3 & 4 & 5 & 0 & 1 \\
+3 & 4 & 5 & 0 & 1 & 2 \\
+4 & 5 & 0 & 1 & 2 & 3 \\
+5 & 0 & 1 & 2 & 3 & 4 
+\end{ls}  \\[-.5\baselineskip]
+of order 6. 
+The Cayley table of the group $(\mathbb{Z}_n, +)$ is also an example of a \emph{symmetric} \lat , that is,  a \lat \ such that $\l (i,j) = \l(j,i)$ for all $i \in R(\l), j \in C(\l)$.%, as may be seen in  $\l_{\ref{Zn}}$.
+
+In addition to symmetry, a \lat \ $\l$ may also have various other structural properties.   It may, for example, contain an $s\times s $ subarray which is  itself also a \lat , called a \emph{subsquare} of side $s$. If $R' \subset R(\l)$ and $C'\subset C(\l)$ are subsets of the row and column indexing sets, both with cardinality $s$, then a subsquare is formally defined as the set of entries $\{(i,j) \mid i\in R', j\in C'\}$ in $\l$. It is easy to see that, as a subsquare is embedded in a \lat, a necessary and sufficient condition for the existence of a subsquare is that it contains exactly $s$ different symbols. For example, the \lat 
+\begin{ls}{lat2}
+{\bf 0} & {\bf 3} & 6 & {\bf 1} & 5 & 4 & 2 \\
+{\bf 3} & {\bf 1} & 4 & {\bf 0} & 2 & 6 & 5 \\
+6 & 4 & 2 & 5 & 1 & 3 & 0 \\
+{\bf 1} & {\bf 0} & 5 & {\bf 3} & 6 & 2 & 4 \\
+5 & {\underline 2} & 1 & {\underline 6} & 4 & 0 & 3\\
+4 &  {\underline 6}& 3 & {\underline 2} & 0 & 5 & 1\\
+2 & 5 & 0 & 4 & 3 & 1 & 6 
+\end{ls} \\[-.5\baselineskip]
+contains at least two disjoint subsquares, a $3\times 3$ subsquare (shown in boldface), defined by $R' = \{0,1,3\}$ and $C' = \{0,1,3\}$, and a $2\times 2$ subsquare (underlined), defined by $R'' = \{4,5\}$ and $C'' = \{1,3\}$. Such a $2\times 2$ subsquare of a \lat \ $\l$ is also sometimes  called an \emph{intercalate} of $\l$.
+
+The relationship between the Cayley tables of quasigroups and \lat s extend naturally to subquasigroups and subsquares. More specifically, the Cayley table of a subquasigroup $G'$ of a quasigroup $G$ is a Latin subsquare of the \lat \ defined by the Cayley table of $G$. Conversely, an appropriately bordered Latin subsquare in the \lat \ defined by the Cayley table of $G$ is the Cayley table of a subquasigroup.% of a quasigroup isotopic to $G$.
+
+Interestingly, due to a group theoretic result by HB Mann and WA McWorter (see \cite{mann1942construction}), the largest possible subsquare of an $n \times n$ \lat \ has sides  $s \leq \lfloor n/2+1\rfloor$.
+
+Two important notions when dealing with \lat s are those of transversals and universals.
+Leonard Euler introduced the notion of a \emph{transversal} of a \lat \ under the name \emph{formule directrix} in \cite{Euler1} and it has also merely been called  a \emph{directrix}, notably by HW Norton \cite{Norton1}.  A transversal $V$ of a \lat \ $\l$ of order $n$, is a set of $n$ distinct, ordered pairs $(i,j)$, one from each row and column, containing all of the $n$ symbols exactly once \cite[Definition 1.27]{colb}. Transversals  are important for many constructions of \lat s and have close ties to complete mappings in quasigroups (see Appendix ), as is highlighted by the following result, which may be found in \cite[Definition 6.5]{colb}.
+\begin{theorem}[\cite{colb}]
+There is a one-to-one correspondence between the transversals of a \lat \ $\l$ and the complete mappings of a quasigroup $(G, \circ)$ with $\l$ as Cayley table.
+\end{theorem}
+ A \emph{universal}, $U$, of a \lat \ $\l$ is a set of $n$ distinct, ordered pairs $(i,j)$, one from each row and column, containing only one symbol.  A universal is therefore the set of all the entries containing a single symbol in $\l$, a particularly useful concept introduced by Kidd, Burger and van Vuuren in 2012 to facilitate the enumeration of specific classes of \lat s \cite{Kidd2012}.
+
+Both transversals and universals may be expressed in permutation form. A \emph{transversal permutation} $v$ sets $v(i) = j$ if $(i,j) \in V$, while the \emph{universal permutation of $k$} sets $u_k(i) = j $ if $\l(i,j) = k$. In the \lat \  \lref{lat2}, the main diagonal is clearly a transversal, say $V$, and the universal of $0$ is given by $U_0 = \{(0,0), (1,3), (2,6), (3,1), (4,5), (5,4), (6,2) \}$.  The corresponding permutations are $v= \binom{0 \ 1 \  2\  3\  4\  5\  6}{ 0\ 1\   2\  3\  4\  5\  6 }$  and  $u_0 =\binom{0\ 1\   2\  3\  4\  5\  6}{0\ 3\ 6\ 1\ 5\ 4\ 2 }$.
+
+%$v= \left(\begin{matrix} 
+% 0 &1 &2 &3 &4 &5 &6 \\ 
+%0 &1  &2 &3 &4 &5 &6  \end{matrix} \right)$ and  $u_0 = \left(\begin{matrix} 0&1 &2&3&4&5&6 \\ 0&3&6&1&5&4&2  \end{matrix} \right)$.
+
+A \lat \ which contains a transversal in natural order on its main diagonal, like  \lref{lat2}, is said to be \emph{idempotent}. Formally, an idempotent \lat \  of order $n$ has $\l(i,i) = i$ for all $i\in \mathbb{Z}_n$. A \lat \ with a universal on the main diagonal is said to be \emph{unipotent}. 
+\section{Orthogonal Latin squares}
+According to Colbourn and Dinitz \cite[Definition 3.1]{colb} two Latin squares of order $n$, $\l$ and $\l'$, are considered \emph{orthogonal} if $\l(i,j) = \l(k,l)$ and $\l'(i,j) = \l'(k,l)$ implies that $i=k$ and $j=l$. Equivalently, orthogonality implies that every element of $\mathbb{Z}_n \times \mathbb{Z}_n$ appears exactly once among the ordered pairs $(\l(i,j), \l'(i,j))$ for $i,j \in \mathbb{Z}_n$.
+
+Latin squares were first formally defined by Leonard Euler when he considered the so-called "36-Officers problem" asking whether it is possible to arrange thirty-six soldiers of six different ranks and from six different regiments in a square such that every row and column contained exactly one soldier of every rank, and one soldier from every regiment \cite{euler}. Labelling the ranks and regiments from the symbol set $\mathbb{Z}_n$, it is clear that Euler was attempting to find a pair of orthogonal \lat s of order 6 where the entry in $\l(i,j)$ would indicate the rank of the soldier in position $(i,j)$ and $\l'(i,j)$ his regiment.  Euler was unable to find such an arrangement of soldiers and continued to propose what has become known as Euler's Conjecture, that no pair of orthogonal \lat s order $n$ exist when $n=4m+2$ for integer values of $m$ \cite{euler}.
+
+ Euler's hunch was lent some credence more than a century later when amateur French mathematician Gaston Tarry proved in two papers that a solution to the "36-Officers problem" (and hence to the special case of Euler's Conjecture where $n=6$) does, indeed,  not exist \cite{tarry}. Sixty year later, however, pairs of orthogonal \lat s were constructed of order 22 \cite{bose1} and order 10 \cite{parker1959construction}, thereby disproving Euler's Conjecture, before Bose, Shrikhande and Parker showed  that it is possible to construct such pairs for all cases of Euler's Conjecture except when $n=6$ \cite{bose}.
+
+It should be noted that orthogonality may also be expressed in terms of transversals and universals, specifically, it is necessary that the entries making up every transversal in $\l$ correspond to a universal in $\l'$ \cite[p. 183]{wallis}. It follows that a \lat \ $\l$ has an  orthogonal mate $\l'$ if and only if $\l$ has $n$ disjoint universals \cite[Theorem 5.1.1]{denes1}, as each of these transversals will correspond to a universal in $\l'$. The \lat \ $\l$ of order $2k$ with $\l(i,j) = i+j \mbox{ (mod $2k$)}$, in other words, the \lat  \ which is the the Cayley table of the the group $(\mathbb{Z}_{2k}, +)$, is an example of a \lat \ without any transversals and therefore has no orthogonal mate.
+
+According to Colbourn and Dinitz  \cite[Definition 3.3]{colb}, the notion of orthogonality may  be generalised a set  of \emph{mutually orthogonal} \lat s $\l_1, \l_2, \ldots, \l_k$, or $k$-MOLS, where $\l_i$ and $\l_j$ are orthogonal for all $1\leq i < j\leq k$. The set of \lat s 
+\[  \mathcal{M} = \left\{ \left[ \begin{matrix}
+      0 & 1 & 2 & 3\\
+      3 & 2 & 1 & 0\\
+      1 & 0 & 3 & 2\\
+      2 & 3 & 0 & 1
+    \end{matrix}\right] ,
+    \left[ \begin{matrix}
+      0 & 1 & 2 & 3\\
+      2 & 3 & 0 & 1\\
+      3 & 2 & 1 & 0\\
+      1 & 0 & 3 & 2
+    \end{matrix} \right],
+      \left[   \begin{matrix}
+      0 & 1 & 2 & 3\\
+      1 & 0 & 3 & 2\\
+      2 & 3 & 0 & 1\\
+      3 & 2 & 1 & 0
+    \end{matrix}  \right]     \right\}  ,    \] for example, form a 3-MOLS of order 4.
+
+MOLS have been shown to have important applications to coding theory \cite{laywine}, subfields of statistics including experimental design (notably by RA Fisher in  \cite{fisher1} and \cite{fisher2}) and the scheduling of sports tournaments (see, amongst many others, Kidd \cite{kidd2010tabu}, Keedwell \cite{keedwell2000designing} and Robinson \cite{robinson}).
+    
+  It is natural to consider the number of \lat s in the largest possible MOLS of order $n$, denoted by $N(n)$. It is possible to establish an upper bound for $N(n)$ by considering a MOLS with the property that every \lat \ has been relabelled so that the first row appears in natural order. There are clearly exactly $n-1$ possible symbols for the first element in the second row of the \lat \ and, therefore, at most $n-1$ \lat s in the MOLS. This informal argument may  be formalised (see, for example, D\'enes and Keedwell \cite[Theorem 5.1.5]{denes1}) to prove the well-known result that $N(n) \leq n-1$ for all orders  $n>1$. Although such an $(n-1)$-MOLS, or \emph{complete MOLS}, clearly exists for $n = 4$ in the example above and in general whenever $n$ is a prime power \cite{}, RH Bruck and HJ Ryser showed in \cite{bruck} that there is also an infinite set of orders for which $N(n) <n-1$  \footnote{These results are due to the fact, first proven by RC Bose in \cite{bosepp}, that a complete MOLS of order $n$ exists if and only if there exist  a finite projective plane of order $n$, however, finite projective planes are considered outside the scope of this study. For further information regarding the equivalence of finite projective planes and complete MOLS, see Mann, Keedwell and Martin.\cite{mann}.  A proof of the non-existence of a finite projective plane of order 6, and hence a solution to the "36-Officers problem," may also be of interest and may be found in MacInnes \cite{McInnes}.}.
+    
+
+ 
+\section{Operations on Latin squares}
+
+permutations and conjugates\\
+orthogonal array\\
+
+standard form wallis p183
+
+\section{Constructions of Latin squares}
+Direct product etc
+
+\section{Chapter summary}
