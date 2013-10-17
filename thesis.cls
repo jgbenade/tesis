@@ -763,7 +763,7 @@
 \def\today{\ifcase\month\or
   January\or February\or March\or April\or May\or June\or
   July\or August\or September\or October\or November\or December\fi
-  \space\number\day, \number\year}
+  \space\number\day, \number\myyear}
 \setlength\columnsep{10\p@}
 \setlength\columnseprule{0\p@}
 \pagestyle{headings}
@@ -800,7 +800,7 @@
 \usepackage[nohints]{minitoc}
 \usepackage[useprefix=true,maxnames=99,style=orion]{biblatex}
 %\usepackage[useprefix=true,maxnames=99,backend=biber,style=orion]{biblatex}
-\usepackage[lined,ruled,linesnumbered,algochapter]{algorithm2e}
+\usepackage[vlined,ruled,linesnumbered,algochapter]{algorithm2e}
 % some preliminaries for algorithm2e
 % if you have more than 99 lines of pseudocode, add 0.5 to values below
   \setlength{\algomargin}{1.5em}
@@ -922,7 +922,8 @@
 \student{???}
 \def\graduation#1{\gdef\@graduation{#1}}
 \graduation{???}
-\def\year#1{\gdef\@year{#1}}
+%\newcommand{\myyear}[1]{\newcommand{\@year}{#1}}
+\def\myyear#1{\gdef\@myyear{#1}}
 
 \def\supervisor#1{\gdef\@supervisor{#1}}
 \supervisor{???}
@@ -1002,7 +1003,7 @@ All rights reserved
 \newcommand{\printname}{\@student}
 \newcommand{\printtype}{\@type}
 \newcommand{\printgraduation}{\@graduation}
-\newcommand{\printyear}{\@year}
+\newcommand{\printyear}{\@myyear}
 \newcommand{\printsupervisorname}{\@supervisor}
 \newcommand{\printcosupervisorname}{\@cosupervisor}
 \newcommand{\printpromotername}{\@promoter}

@@ -15,6 +15,9 @@
 % add packages as needed (check first, the thesis class already includes some packages)
 
 \usepackage{amsmath, amsthm, amsfonts}
+%\usepackage[lotdepth]{subfig}
+%\usepackage[ ruled,linesnumbered,  vlined]{algorithm2e}
+\usepackage{pgfplots, wrapfig}
 
 \DeclareSymbolFont{extraup}{U}{zavm}{m}{n}
 \DeclareMathSymbol{\varheart}{\mathalpha}{extraup}{86}
@@ -30,7 +33,7 @@
 \thesistitle{The design of a distributed framework\\ for the enumeration of sets of\\ mutually orthogonal Latin squares}
 \student{Johannes Gerhardus Benad\'{e}}
 \graduation{December}
-\year{2014}
+\myyear{2014}
 
 % if masters
 \supervisor{Prof JH van Vuuren}
@@ -48,6 +51,9 @@
 
 \addbibresource{mybib.bib} % your .bib file
 
+\newcommand{\iis}{\texttt{isSmallest} }
+\newcommand{\m}{\mathcal{ M}} 
+\newcommand{\p}{\mathcal{P}}
 \newcommand{\lat}{Latin square}
 \renewcommand{\l}{ \mbox{\bf \emph{L}} }
 \newcommand{\lref}[1]{$\l_{\ref{#1}}$}
