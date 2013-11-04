@@ -5,7 +5,7 @@
 
 Chapter 4 introduces the concepts of distributed and volunteer computing with a brief historical overview  a summary of some popular projects.  Berkeley Open Infrastructure for Network Computing (BOINC) is examined in detail in the second section, starting with basic concepts and the steps required to create a volunteer computing project. Some consideration is also given to special types of applications and the requirements of setting up a BOINC server, as well as common security concerns and challenges facing project administrators. Note  that the section on BOINC is largely taken from the BOINC documentation \cite{boincwiki}, except where otherwise stated. 
  
-\section{An historical overview of public-resource computing}
+\section{An historical overview of public-resource computing} \label{VChist}
 In John Brunner's 1975 science-fiction novel, \emph{The Shockwave Rider} \cite{brunner}, the main character creates a "tapeworm" program which was able to propagate itself through a network of computers, replicating when needed and consuming resources wherever available. This type of program, capable of harnessing resources on any number of machines, piqued the interest of a group of researchers at Xerox's Palo Alto Research Center (which was famously also the home of the first graphical user interface) who set about creating a number of "worms"   for controlling multi-machine performance measurements of their pioneering first Ethernet network \cite{worms}. 
 Distributed computing systems  were mainly confined to networks within organisations or academic departments for the following two decades through middleware systems for facilitating distributed computing such as Condor, which was developed in 1988, is still in active use   and changed its name to HTCondor in 2012 \cite{condor}, until  the widespread public adoption of personal computers and the internet made it possible to involve the public in distributed computing, or what will be called \emph{volunteer computing}.
 
@@ -26,13 +26,13 @@ Today, a number of large organizations are making use of volunteer computing to 
 
 BOINC remains under active development by a group of software developers and project administrators. A BOINC client for Google's open-source mobile operating system Android has recently been released, thereby enabling the approximately 470 million Android smartphones in the market \cite{mobithinking}, many of which have two, four or even eight processors,      to take part in volunteer computing \cite{android}.
 
-\section{Berkeley Open Infrastructure for Network Computing}
+\section{Berkeley Open Infrastructure for Network Computing} \label{Boincgen}
 The main aim of BOINC is to simplify setting up a large-scale volunteer computing project, minimize the time required to administrate the day-to-day running of the project and enable a single computer to, after a few weeks of work, serve as a server for a project involving thousands of volunteers. Reducing the entry cost to volunteer computing has enabled many scientists with wildly varying backgrounds and only moderate programming skills to take advantage of public resources for their computing, something which would not have been possible had it been necessary that they design the entire system themselves. According to Anderson \cite{anderson2004boinc},  secondary design goals included support for a diverse set of applications and programming languages, allowing the sharing of resources between autonomous projects by letting volunteers simultaneously connect to a number of projects and assigning a priority to each project   and, finally, rewarding the volunteers in some way by measuring the resources contributed.
 
 
 As enticing as  the advantages of public resource computing and BOINC in particular may seem, it is important to note that not all applications   work equally well within this model. For a project to be successful in  utilizing public resources, especially in the developing world where high-speed internet is still a rarity,  it is firstly  very important that the application  has a large computation to data ratio so that small data transfers to volunteers can lead to hours and hours of computations and, secondly, that the execution of the application be independently parallelisable. Some classes of applications which seem particularly well suited to this type of distribution are discussed in \cite{anderson:pc}, for example the simulation of complex physical systems  where every simulation is independent of the others  or physical models with complex parameter spaces which must be explored. Random and genetic algorithms may also benefit from volunteer computing, as every independent trail can be performed by a different volunteer in the case of random algorithms, while for genetic algorithms every volunteer may receive an initial population of solutions to independently evolve from. A final category of projects, which has perhaps proven most successful in practice, involves the analysis of large amounts of data, for example from radio telescopes as in the case of SETI@Home, or  from the Large Hadron Collider in the case of LHC@Home.
 
- \subsection{Basic workflow and concepts of volunteer computing} 
+ \subsection{Basic workflow and concepts of volunteer computing} \label{Bconcepts}
 According to \cite{boincwiki}, a BOINC \emph{project} is a self-contained entity consisting of a  database, website, \emph{applications}, \emph{workunits} and \emph{results}.
 
 An application consists of a number of different executable programs, usually one for every \emph{platform} that the project is to be available on. Standard platforms are pre-defined in BOINC and are   combinations of CPU architectures and operating systems \emph{e.g.} a 32-bit Intel processor running Windows or a 64-bit Intel processor running Linux. Knowing which platform a computation executes on is important for ensuring correct results, as different platforms handle floating-point operations in different ways and this may lead to discrepancies if ignored.
@@ -58,10 +58,10 @@ In the meantime the host would have received new results for processing and the 
 \end{figure}
 
 
-\subsection{Grid-enabling a simple BOINC project}
+\subsection{Grid-enabling a simple BOINC project} \label{Bgridenable}
 A scientist attempting to turn an existing application into a volunteer computing project must  determine how the application will be parallelised, modify his existing application to make use of the BOINC API and finally provide the server-side deamons responsible for scheduling,  generating new workunits and validating and assimilating incoming results.
 The first of these tasks, parrellelising the computation is highly application specific and has little to do with the structure and components of a BOINC project but it may be insightful to give further consideration to the BOINC API and the various deamons running on the server.
-\subsubsection{The BOINC API}
+\subsubsection{The BOINC API} \label{Bapi}
 \begin{table}[htb] \centering
 \caption{The core of the BOINC C/C++ API \cite{boincwiki}}
 \begin{tabular}{p{2.5cm}p{11.6cm}}\toprule
@@ -88,7 +88,7 @@ The remainder of the API mainly focusses on providing methods which let the clie
 
 
  
-\subsubsection{Deamons}
+\subsubsection{Deamons} \label{Bdeamons}
 The main task of the work generator is inserting new workunits or jobs into the project database. This may happen once, at the start of the project, in a number of discrete batches or continuously as results are returned from the volunteers. It is also possible to develop a web interface which allows for the remote submission of jobs.
 Before implementing the work generator, however, projects must decide on templates for the workunits and results. These templates are XML files which provide  the application with the necessary information to compute the workunit and are typically re-used for millions of jobs. 
 An input template may for example specify the name of the actual file to which the logical filename must be resolved, possible command-line arguments along with workunit attributes such as an estimate of its execution time, the resources required for the computation and the deadline by which the server expects to receive the result before re-issuing the workunit to a different host.  
@@ -157,9 +157,9 @@ The sample assimilator does exactly this and it is up to projects to decide what
 
 Projects which make use of trickle messages must also provide a deamon to handle these messages. Trickle messages may for example be used by the application to periodically send its current computation state to the server  so that the server may   determine whether to assign partial credit for the work done up to the current point  or   to abort the computation based on some internal logic.
 
-\subsection{Special types of applications}
+\subsection{Special types of applications} \label{Btypes}
 In addition to the basic functionality BOINC allows applications to display graphics, execute on multiple cores or GPUs through OpenCL \cite{opencl}, and CUDA \cite{cuda} or even run entirely within a virtual machine. 
-\subsubsection{Graphics applications}
+\subsubsection{Graphics applications} \label{Bgraphics}
 Publicly-launched volunteer computing projects usually attempt to provide volunteers with some visualisation of the computation running on their machine, either as a screensaver or in a window which can be opened in the BOINC Client Manager. The main reason for providing graphics is to further engage the public in the goals and workings of a scientific project in order to increase involvement, and examples of graphics provided by SETI@Home and WCG may be seen in Figure \ref{fig:boincgraphics}.
 \begin{figure}[htb]
 \centering
@@ -173,14 +173,14 @@ Publicly-launched volunteer computing projects usually attempt to provide volunt
 \end{figure}
   In a  recent survey of $15\,627$ volunteers by IBM's World Community Grid project \cite{wcg}, however, 72\% of volunteers either disabled the graphics ar didn't pay attention to it  \cite{wcg2013}, thereby casting some doubt on the actual benefit of graphical applications. Graphics applications are usually separate from the main scientific application, built on  a specific  BOINC graphics library and makes use of OpenGL \cite{opengl} for displaying graphics. Communication with the main application takes place through shared memory, the main application would periodically store a representation of its current state and progress in  a block of memory which is accessible to the graphics application, from where it will be read and displayed. Graphics applications can also display static images, text or web-based graphics by opening a browser windows pointing to a specific URL.
 
-\subsubsection{Muti-core and GPU applications}
+\subsubsection{Muti-core and GPU applications} \label{Bopencl}
 CPU manufacturers have been dealing with the limit placed on CPU frequency by increasing the number of cores provided and it seems that this trend will continue for some time \cite{spu}. In cases where the completion time of individual workunits want to be improved, or the memory footprint of the application is too large to allow a separate copy of the application to run on every core, it may be desirable to have a multi-threaded application developed in OpenCL, MPI, OpenMP, CUDA or a number of other languages. BOINC also supports what it calls `coprocessors' or GPUs designed by NVIDIA, AMD or Intel. Available GPUs are reported to the scheduler by the BOINC client, which also keeps track of which instances on every GPU is currently allocated. To prevent system failures, GPU kernels are  executed within critical sections, which may not be killed by the BOINC client and  BOINC projects may define workunits of different size classes to compensate for the potentially dramatic difference in speed between CPU and GPU versions of the same applications and thereby ensure that a typical workunit will take approximately the same amount of time irrespective of the architecture on which it is executed.
 
-\subsubsection{Applications which run inside virtual machines}
+\subsubsection{Applications which run inside virtual machines} \label{Bvmach}
 BOINC supports applications which run entirely within virtual machines. This approach has two distinct advantages in that it provides the highest level of security for the host machine, as virtual machines cannot access or modify the host system, and there is no need to build applications for different architectures as every application will run on a virtual computer with exactly the same runtime environment on all platforms.  
 There are, however, also some additional complexities which arise from using applications inside virtual machines such as the fact  that hosts require software such VirtualBox to mount the machine image, yet VirtualBox  is not currently available for all processors. Furthermore, GPU applications can not currently be run inside VirtualBox and not all processors are capable of running both 32- and 64-bit virtual machines, so images of both architectures will have to be provided. Distributing the virtual machine image also increases the size of the first download to approximately 200Mb, which may be prohibitive for volunteers with limited bandwidth.
 
-\subsection{Setting up a server and project maintenance}
+\subsection{Setting up a server and project maintenance} \label{Bserver}
 As stated in \S \ref{},   a BOINC project consists mainly of a MySQL database, a directory structure and a configuration file which specifies the options, deamons and periodic tasks which must be performed and as such, it is possible to use almost any computer as a  BOINC server \cite{boincwiki}.
 
 As with any server reliability and security is of the utmost importance, and a server should at least be placed behind a firewall and have a reliable internet connection for connecting with volunteers, with a static IP address. Additional hardware measures which may  be taken to improve reliability  include an uninterrupted power supply, automatic backups, adequate cooling and hot-swappable spare server parts. Any Unix or Linux distribution may be used for setting up a server and  detailed instructions are available at \cite{boincwiki}. 
@@ -188,7 +188,7 @@ Alternatively, a project may elect to host its server either on the Amazon Elast
 
 Once a server has been set up a number of maintenance tasks must be performed regularly for example reviewing the deamon logs for errors, deleting files as they are no longer needed and archiving  and purging old jobs from the database to prevent the database from becoming to large. BOINC provides small programmes for all of these activities. Additionally it is possible that, due to the popularity of a project, a server may no longer be able to keep up with  the traffic generated by the volunteers, which will result in dropped connections, slow website access, deamons which fall behind and very slow database queries. A number of strategies are discussed in the BOINC documentation for upgrading the server in such scenarios, including upgrading the server hardware,  hosting the database on a separate server and  parallelising the deamons and scheduler so that multiple instances are constantly running.
 
-\subsection{Security}
+\subsection{Security} \label{Bsecurity}
 According to \cite{boincwiki} a number of security concerns arise from the inherently public nature of volunteer computing, chief amongst which are
 \begin{itemize}
 \item result falsification,
@@ -201,7 +201,7 @@ Result and credit falsification may be limited by making use of replication and 
 BOINC protects projects agains denial-of-service attacks, in which servers are overrun by requests and transfers from automated programs, by providing a size limit for every file that is uploaded to the server (refer to Table \ref{tab:outtemplate} in \S \ref{}) and making use upload certificates. Every project is responsible for protecting its own users' account information against theft and servers should be subjected to regular security audits.  
 The greatest security risk to volunteer computing project is the potential that a server may be broken into and used to distribute malicious executables which wreak havoc on  volunteer hosts. In order to prevent this, code-signing software is used which signs every approved and secure application version as authenticate. The computer which is responsible for code-signing applications should be kept in `cold storage', in other words, physically secure and completely disconnected from the network to prevent attackers from breaking into it and authenticating their applications. 
 
-\subsection{Challenges}
+\subsection{Challenges} \label{Bchallenges}
 After a bright start, volunteer computing has decreased in the past few years, most recently from approximately $290\,000$ volunteers in 2012 to $240\,000$ in 2013 \cite{anderson2013}. Volunteer computing projects have also largely stagnated, with only very few, small projects being initiated in recent years  and the largest projects such as GIMPS, SETI@Home and Einstein@Home are all at least 10 years old. Some of this recent stagnation may be attributed to the fact that volunteer computing projects have largely failed to expand beyond their initial target audience of technically minded males working in sectors such as engineering and information technology. Indeed, a recent survey has shown that 90\% of WCG's volunteers are male and 70\% are in some sort of scientific occupation \cite{wcg2013}. A number of initiatives have been luanched to break down this gender and technical gap, the most successful of which seems to be a Facebook \cite{facebook} initiative called Progress Thru Processors which has more than $160\,000$ likes and boasts a volunteer-base evenly split along gender lines \cite{ptp2013}.
 
 Volunteer computing has traditionally been centred in the United States and Western Europe with only some contribution  from developing countries such as Brazil, India and China with potentially massive numbers of volunteers \cite{wcg2013}. The main reason for this seems to be the language barrier, with the majority of projects inaccessible for non-English-speaking volunteers \cite{china2013} and there have been recent developments to the BOINC source code which simplifies the translation of projects. Additional problems arise from the quality of hardware, especially in China, where the actual specifications of CPUs and GPUs often differ from the reported name as many hardware brandnames are ``unofficially'' produced in factories \cite{keith}. 
